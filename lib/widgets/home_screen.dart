@@ -1,3 +1,4 @@
+import 'package:expense_tracker_app/widgets/new_expense.dart';
 import 'package:flutter/material.dart';
 
 import 'expenses_list/expenses_list.dart';
@@ -36,7 +37,7 @@ class _ExpensesState extends State<Expenses> {
   void _openAddExpenseOverlay() {
     showModalBottomSheet(
       context: context,
-      builder: (context) => Text('Modal Sheet Clicked'),
+      builder: (context) => const NewExpense()
     );
   }
 
@@ -55,7 +56,7 @@ class _ExpensesState extends State<Expenses> {
             )
           ], // for adding action button in the right side of toolbar
         ),
-        backgroundColor: Color.fromARGB(255, 227, 222, 222),
+        backgroundColor: Colors.indigo[50],
         body: Container(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
